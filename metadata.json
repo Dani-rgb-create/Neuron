@@ -1,0 +1,6 @@
+{
+  "name": "NEURON",
+  "description": "Plataforma educativa y terapéutica offline-first para educación especial, TEA, TDAH y neurodiversidad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
