@@ -161,10 +161,7 @@ fun DashboardScreen(viewModel: NeuronViewModel) {
                         selected = isSelected,
                         onClick = { 
                             viewModel.speak(tab.label)
-                            viewModel::class.java.getMethod("currentTab").declaringClass.getDeclaredField("_currentTab").apply {
-                                isAccessible = true
-                                (get(viewModel) as MutableStateFlow<String>).value = tab.key
-                            }
+                            viewModel.selectTab(tab.key)
                         },
                         icon = { Icon(tab.icon, contentDescription = tab.label) },
                         label = { Text(tab.label, fontSize = 11.sp, fontWeight = FontWeight.Bold) },

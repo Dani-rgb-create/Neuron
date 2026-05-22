@@ -174,6 +174,10 @@ class NeuronViewModel(application: Application) : AndroidViewModel(application),
     private val _currentTab = MutableStateFlow("AGENDA")
     val currentTab = _currentTab.asStateFlow()
 
+    fun selectTab(tab: String) {
+        _currentTab.value = tab
+    }
+
     // List of students for currently active user
     val students: StateFlow<List<Student>> = activeUser.flatMapLatest { user ->
         if (user != null) {
